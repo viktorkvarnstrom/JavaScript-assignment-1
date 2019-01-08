@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="backgr"><img src="https://images.pexels.com/photos/592941/pexels-photo-592941.jpeg?cs=srgb&dl=bench-blonde-bright-592941.jpg&fm=jpg"></div>
+  <div class="container">
+    <div id="rubrik">
+      <h1>Signup for your newsletter here</h1>
+      <hr>
+    </div>
+    <form id="registerForm" action="congrats.html" onsubmit=" return validation()">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+          <span id="useremail"></span>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" placeholder="Password">
+          <span id="passwordid"></span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Address:</label>
+        <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+        <span id="addressid"></span>
+      </div>
+      <div class="form-group">
+        <label for="tellUs">Tell us about your self:</label>
+        <textarea type="text" class="form-control required" id="tellus" placeholder=""></textarea>
+        <span id="tellusid"></span>
+      </div>
+      Civil status
+      <hr>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="radio" value="option1">
+        <label class="form-check-label" for="exampleRadios1">
+          Married
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="radio1" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+          Singel
+        </label>
+        <span id="radioid"></span>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputState">Country</label>
+          <select id="inputstate" class="form-control">
+            <option selected>Choose...</option>
+            <option>Sweden</option>
+            <option>Norway</option>
+            <option>Finland</option>
+            <option>Denmark</option>
+          </select>
+        <span id="inputstateid"></span>  
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputcity">
+          <span id="inputcityid"></span>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Zip</label>
+          <input type="text" class="form-control" id="inputzip">
+          <span id="inputzipid"></span>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridcheck">
+          <label class="form-check-label" for="gridCheck">
+            <p>Over 18</p>
+          </label>
+          <span id="checkboxid"></span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Signup</button>
+    </form>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+        $().ready(function() {
+            $("#registerForm").validate({
+                rules : {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    address: {
+                        required: true,
+                        minlength: 5
+                    },
+                    tellus: {
+                        required: true,
+                        minlength: 5
+                    },
+                    radio: {
+                        required: true,
+                    },
+                    radio1: {
+                        required: true,
+                    },
+                    inputstate: {
+                        required: true,
+                    },
+                    inputcity: {
+                        required: true,
+                        minlenght: 2
+                    },
+                    inputzip: {
+                        required: true,
+                    },
+                    gridcheck: {
+                        required: true,
+                    }
+                },
+                messages : {
+                    email: {
+                        required: "Please enter a email",
+                        minlenght: "Invalid email"
+                    },
+                    password: {
+                        required: "Please enter a password ",
+                        minlenght: "Your password must consist at least 5 characters"
+                    },    //missed comma
+                    address: {
+                        required: "Please enter a address",
+                        minlenght: "Your address must consist at least 5 characters",
+                    },   //missed comma
+                    tellus: {
+                        required: "Tell us something about your self",
+                        minlength: "tell us"
+                    }
+                }
+            });
+        }); 
+  
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+
+
+body {
+    color: rgb(20, 16, 16);
+    padding: 0;
+    margin: 0;
+}
+
+
+#backgr img {
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+}
+
+form {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background: rgba(116, 122, 121, 0.781);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+#rubrik {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+}
+
+#inputAddress2 {
+    height: 100px;
+}
+
+h2 {
+    font-size: 100px;
+    color: azure;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+}
