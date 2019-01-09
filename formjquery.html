@@ -24,35 +24,35 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Email">
+          <input type="email" class="form-control" name="email" id="email" placeholder="Email">
           <span id="useremail"></span>
         </div>
         <div class="form-group col-md-6">
           <label for="password">Password:</label>
-          <input type="password" class="form-control" id="password" placeholder="Password">
+          <input type="password" class="form-control" name="password" id="password" placeholder="Password">
           <span id="passwordid"></span>
         </div>
       </div>
       <div class="form-group">
         <label for="inputAddress">Address:</label>
-        <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+        <input type="text" class="form-control" name="address" id="address" placeholder="1234 Main St">
         <span id="addressid"></span>
       </div>
       <div class="form-group">
         <label for="tellUs">Tell us about your self:</label>
-        <textarea type="text" class="form-control required" id="tellus" placeholder=""></textarea>
+        <textarea type="text" class="form-control required" name="tellus" id="tellus" placeholder=""></textarea>
         <span id="tellusid"></span>
       </div>
       Civil status
       <hr>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="radio" value="option1">
+        <input class="form-check-input" type="radio" name="radios" id="radio" value="option1">
         <label class="form-check-label" for="exampleRadios1">
           Married
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="radio1" value="option2">
+        <input class="form-check-input" type="radio" name="radios" id="radio1" value="option2">
         <label class="form-check-label" for="exampleRadios2">
           Singel
         </label>
@@ -61,8 +61,8 @@
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="inputState">Country</label>
-          <select id="inputstate" class="form-control">
-            <option selected>Choose...</option>
+          <select id="inputstate" class="form-control" name="inputstate" placeholder="choose">
+            <option>Choose...</option>
             <option>Sweden</option>
             <option>Norway</option>
             <option>Finland</option>
@@ -72,12 +72,12 @@
         </div>
         <div class="form-group col-md-6">
           <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputcity">
+          <input type="text" class="form-control" name="inputcity" id="inputcity">
           <span id="inputcityid"></span>
         </div>
         <div class="form-group col-md-2">
           <label for="inputZip">Zip</label>
-          <input type="text" class="form-control" id="inputzip">
+          <input type="text" class="form-control" name="inputzip" id="inputzip">
           <span id="inputzipid"></span>
         </div>
       </div>
@@ -96,6 +96,7 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
   <script src="js/script.js"></script>
 
@@ -119,10 +120,7 @@
                         required: true,
                         minlength: 5
                     },
-                    radio: {
-                        required: true,
-                    },
-                    radio1: {
+                    radios: {
                         required: true,
                     },
                     inputstate: {
@@ -147,11 +145,11 @@
                     password: {
                         required: "Please enter a password ",
                         minlenght: "Your password must consist at least 5 characters"
-                    },    //missed comma
+                    },    
                     address: {
                         required: "Please enter a address",
                         minlenght: "Your address must consist at least 5 characters",
-                    },   //missed comma
+                    },   
                     tellus: {
                         required: "Tell us something about your self",
                         minlength: "tell us"
