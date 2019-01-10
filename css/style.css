@@ -6,6 +6,9 @@ body {
     margin: 0;
 }
 
+.container {
+    box-sizing: border-box;
+}
 
 #backgr img {
     height: 900px;
@@ -17,7 +20,7 @@ form {
     position: absolute;
     top: 100px;
     left: 50px;
-    background: rgba(116, 122, 121, 0.781);
+    background: hsla(171, 3%, 47%, 0.712);
     padding: 40px;
     border-radius: 20px;
 }
@@ -28,15 +31,25 @@ form {
     left: 70px;
 }
 
-#inputAddress2 {
-    height: 100px;
+textarea {
+    resize: none;
 }
 
 h2 {
-    font-size: 100px;
-    color: azure;
-    font-weight: bold;
     position: absolute;
-    top: 50%;
-    left: 15%;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    top: 40%;
+    left: 25%;
 }
+
+.error {
+    color: rgb(141, 36, 36);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+ span {
+    color: rgb(141, 36, 36);
+ }

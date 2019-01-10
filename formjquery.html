@@ -23,27 +23,23 @@
     <form id="registerForm" action="congrats.html" onsubmit=" return validation()">
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputEmail4">Email:</label>
+          <label for="inputEmail4">Email: <span>*</span></label>
           <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-          <span id="useremail"></span>
         </div>
         <div class="form-group col-md-6">
-          <label for="password">Password:</label>
+          <label for="password">Password: <span>*</span></label>
           <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-          <span id="passwordid"></span>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputAddress">Address:</label>
+        <label for="inputAddress">Address: <span>*</span></label>
         <input type="text" class="form-control" name="address" id="address" placeholder="1234 Main St">
-        <span id="addressid"></span>
       </div>
       <div class="form-group">
-        <label for="tellUs">Tell us about your self:</label>
+        <label for="tellUs">Tell us about your self: <span>*</span></label>
         <textarea type="text" class="form-control required" name="tellus" id="tellus" placeholder=""></textarea>
-        <span id="tellusid"></span>
       </div>
-      Civil status
+      <p>Civilstatus: <span>*</span></p>
       <hr>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="radios" id="radio" value="option1">
@@ -53,41 +49,34 @@
       </div>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="radios" id="radio1" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
-          Singel
-        </label>
-        <span id="radioid"></span>
+        <label class="form-check-label" for="exampleRadios2">singel</label>
       </div>
       <div class="form-row">
         <div class="form-group col-md-4">
-          <label for="inputState">Country</label>
-          <select id="inputstate" class="form-control" name="inputstate" placeholder="choose">
-            <option>Choose...</option>
-            <option>Sweden</option>
-            <option>Norway</option>
-            <option>Finland</option>
-            <option>Denmark</option>
+          <label for="inputState">Country: <span>*</span></label>
+          <select id="inputcountry" class="form-control" name="inputcountry">
+            <option value="">Choose...</option>
+            <option value="1">Sweden</option>
+            <option value="2">Norway</option>
+            <option value="3">Finland</option>
+            <option value="4">Denmark</option>
           </select>
-        <span id="inputstateid"></span>  
         </div>
         <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
+          <label for="inputCity">City: <span>*</span></label>
           <input type="text" class="form-control" name="inputcity" id="inputcity">
-          <span id="inputcityid"></span>
         </div>
         <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
+          <label for="inputZip">Zip: <span>*</span></label>
           <input type="text" class="form-control" name="inputzip" id="inputzip">
-          <span id="inputzipid"></span>
         </div>
       </div>
       <div class="form-group">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridcheck">
+          <input class="form-check-input" type="checkbox" name="agree" id="agree">
           <label class="form-check-label" for="gridCheck">
-            <p>Over 18</p>
+            <p>Over 18 <span>*</span></p>
           </label>
-          <span id="checkboxid"></span>
         </div>
       </div>
       <button type="submit" class="btn btn-primary">Signup</button>
@@ -96,69 +85,9 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
   <script src="js/script.js"></script>
-
-  <script>
-        $().ready(function() {
-            $("#registerForm").validate({
-                rules : {
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    password: {
-                        required: true,
-                        minlength: 5
-                    },
-                    address: {
-                        required: true,
-                        minlength: 5
-                    },
-                    tellus: {
-                        required: true,
-                        minlength: 5
-                    },
-                    radios: {
-                        required: true,
-                    },
-                    inputstate: {
-                        required: true,
-                    },
-                    inputcity: {
-                        required: true,
-                        minlenght: 2
-                    },
-                    inputzip: {
-                        required: true,
-                    },
-                    gridcheck: {
-                        required: true,
-                    }
-                },
-                messages : {
-                    email: {
-                        required: "Please enter a email",
-                        minlenght: "Invalid email"
-                    },
-                    password: {
-                        required: "Please enter a password ",
-                        minlenght: "Your password must consist at least 5 characters"
-                    },    
-                    address: {
-                        required: "Please enter a address",
-                        minlenght: "Your address must consist at least 5 characters",
-                    },   
-                    tellus: {
-                        required: "Tell us something about your self",
-                        minlength: "tell us"
-                    }
-                }
-            });
-        }); 
-  
-</script>
 
 </body>
 
