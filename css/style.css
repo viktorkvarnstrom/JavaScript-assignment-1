@@ -11,7 +11,7 @@ body {
 }
 
 #backgr img {
-    height: 900px;
+    height: 1000px;
     width: 100%;
     z-index: -1;
 }
@@ -19,10 +19,11 @@ body {
 form {
     position: absolute;
     top: 100px;
-    left: 50px;
-    background: hsla(171, 3%, 47%, 0.712);
+    left: 2%;
+    background: hsla(174, 6%, 35%, 0.849);
     padding: 40px;
     border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.349);
 }
 
 #rubrik {
@@ -33,6 +34,7 @@ form {
 
 textarea {
     resize: none;
+    position: relative;
 }
 
 h2 {
@@ -53,3 +55,10 @@ h2 {
  span {
     color: rgb(141, 36, 36);
  }
+
+ #characters {
+     color: black;
+     text-align: right;
+ }
+
+

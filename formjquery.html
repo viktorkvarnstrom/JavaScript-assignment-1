@@ -20,7 +20,7 @@
       <h1>Signup for your newsletter here</h1>
       <hr>
     </div>
-    <form id="registerForm" action="congrats.html" onsubmit=" return validation()">
+    <form id="newsletterForm" action="congrats.html">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">Email: <span>*</span></label>
@@ -36,21 +36,22 @@
         <input type="text" class="form-control" name="address" id="address" placeholder="1234 Main St">
       </div>
       <div class="form-group">
-        <label for="tellUs">Tell us about your self: <span>*</span></label>
-        <textarea type="text" class="form-control required" name="tellus" id="tellus" placeholder=""></textarea>
+        <label for="tellUs">Tell us about your self: (max 200 letters) <span>*</span></label>
+        <textarea type="text" class="form-control required" name="tellus" id="tellus" placeholder="" maxlength="200"></textarea>
+        <span id="characters">200</span> characters remaining
       </div>
-      <p>Civilstatus: <span>*</span></p>
-      <hr>
+      <p>I want newsletter: <span>*</span></p>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="radios" id="radio" value="option1">
+        <input class="form-check-input" type="radio" name="radio" id="radio" value="option1">
         <label class="form-check-label" for="exampleRadios1">
-          Married
+          Weekly
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="radios" id="radio1" value="option2">
-        <label class="form-check-label" for="exampleRadios2">singel</label>
+        <input class="form-check-input" type="radio" name="radio" id="radio1" value="option2">
+        <label class="form-check-label" for="exampleRadios2">Monthly</label>
       </div>
+      <hr>
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="inputState">Country: <span>*</span></label>
@@ -75,7 +76,7 @@
         <div class="form-check">
           <input class="form-check-input" type="checkbox" name="agree" id="agree">
           <label class="form-check-label" for="gridCheck">
-            <p>Over 18 <span>*</span></p>
+            <p>Accept the items: <span>*</span></p>
           </label>
         </div>
       </div>
